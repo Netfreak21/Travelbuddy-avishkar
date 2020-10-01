@@ -16,7 +16,8 @@ public class Days implements Serializable{
     public String expenses;
     public  String currentAdd;
     Days(){
-        description=url=NULL;
+        description=NULL;
+        url=NULL;
         expenses=NULL;
         currentAdd=NULL;
         editable=true;
@@ -27,6 +28,5 @@ public class Days implements Serializable{
         this.url = imageurl;
         this.expenses = expenses;
         editable=true;
-//        startDate = new Date();
     }
 }
