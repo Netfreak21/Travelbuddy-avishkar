@@ -16,8 +16,11 @@ public class VerticalTextView extends TextView {
         if(Gravity.isVertical(gravity) && (gravity& Gravity.VERTICAL_GRAVITY_MASK) == Gravity.BOTTOM) {
             setGravity((gravity& Gravity.HORIZONTAL_GRAVITY_MASK) | Gravity.TOP);
             topDown = false;
-        }else
+        }
+        else
+        {
             topDown = true;
+        }
     }
 
     @Override
@@ -39,10 +42,8 @@ public class VerticalTextView extends TextView {
             canvas.rotate(90);
         }else {
             canvas.translate(0, getHeight());
-            canvas.rotate(-90);
+            canvas.rotate(270);
         }
-
-
         canvas.translate(getCompoundPaddingLeft(), getExtendedPaddingTop());
 
         getLayout().draw(canvas);
