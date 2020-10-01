@@ -11,13 +11,8 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RatingBar;
 import android.widget.TextView;
-
 import java.util.ArrayList;
 import java.util.List;
-
-/**
- * Created by lokesh on 1/9/18.
- */
 
 public class CardAdapter extends RecyclerView.Adapter<CardAdapter.RecyclerViewHolder> {
     private Context mContext;
@@ -40,7 +35,7 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.RecyclerViewHo
         switch(position)
         {
             case 0:
-                holder.title.setText("current location...");
+                holder.title.setText("Located at ");
                 holder.place.setText(curr.city);
                 holder.address.setText(curr.address);
                 holder.latitude.setText(curr.latitude+"");
@@ -53,7 +48,7 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.RecyclerViewHo
                 break;
 
             case 1://weather
-                holder.title.setText("Weather");
+                holder.title.setText("Weather here");
                 holder.place.setText(curr.city);
                 holder.address.setText(curr.address);
                 holder.latitude.setText(curr.latitude+"");
@@ -65,7 +60,7 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.RecyclerViewHo
                 holder.lv.setBackgroundResource(R.drawable.weather);
                 break;
             default:
-                holder.title.setText("Tourist places near you...");
+                holder.title.setText("Tourist places near you.");
                 holder.place.setText(curr.city);
                 holder.address.setText(curr.address);
                 holder.latitude.setText(curr.latitude+"");
@@ -74,7 +69,7 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.RecyclerViewHo
                 holder.ratings.setRating((float) curr.rating);
                 holder.draw.setVisibility(View.INVISIBLE);
                 holder.temp.setVisibility(View.INVISIBLE);
-                holder.lv.setBackgroundColor(0xFFBE5B5B);
+                holder.lv.setBackgroundColor(0xFFBE5B60);
                 holder.lv.setBackgroundResource(R.drawable.back2);
                 break;
         }
